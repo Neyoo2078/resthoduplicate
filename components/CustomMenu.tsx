@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 interface props {
   items: any;
@@ -33,17 +34,18 @@ const CustomMenu = ({ items }: props) => {
     };
   }, []);
   return (
-    <div
+    <motion.div
       ref={outsideBox}
       id={`${items.name}`}
       className="text-white relative flex-col flex gap-3 w-[100px]"
+      onMouseEnter={() => {
+        setMenuitems(true);
+      }}
+      onMouseLeave={() => {
+        setMenuitems(false);
+      }}
     >
-      <div
-        onClick={() => {
-          setMenuitems(!Menuitems);
-        }}
-        className="flex gap-2 w-full"
-      >
+      <div className="flex gap-2 w-full">
         <button className="w-full"> {items.name}</button>
         {items.subLInks.length > 0 && (
           <div>
@@ -51,12 +53,19 @@ const CustomMenu = ({ items }: props) => {
           </div>
         )}
       </div>
-      <div>
+      <AnimatePresence>
         {Menuitems && items.subLInks.length > 0 && (
-          <div
+          <motion.div
+            exit={{ opacity: 1, y: 7, transition: { duration: 0.7 } }}
             ref={box}
             style={{ position: 'absolute', bottom: -Height }}
-            className={`bg-white w-[150px] cursor-pointer p-3  rounded-lg flex flex-col gap-2  z-50 `}
+            onMouseEnter={() => {
+              setMenuitems(true);
+            }}
+            onMouseLeave={() => {
+              setMenuitems(false);
+            }}
+            className={`bg-white w-[150px] cursor-pointer p-3 animate-slideup  rounded-lg flex flex-col gap-2  z-50 `}
           >
             {items.subLInks.map((items: any, i: number) => (
               <div
@@ -69,10 +78,10 @@ const CustomMenu = ({ items }: props) => {
                 {items.name}
               </div>
             ))}
-          </div>
+          </motion.div>
         )}{' '}
-      </div>
-    </div>
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

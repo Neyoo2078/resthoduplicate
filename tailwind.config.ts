@@ -32,7 +32,7 @@ const config: Config = {
           to: { opacity: '1' },
         },
         slideup: {
-          from: { opacity: ' 0', transform: 'translateY(5%)' },
+          from: { opacity: ' 0', transform: 'translateY(10%)' },
           to: { opacity: '1', transform: 'none' },
         },
         slidedown: {
