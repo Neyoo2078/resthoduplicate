@@ -18,7 +18,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="flex bg-gradient-to-r w-full overflow-hidden from-[#1C1F17] via-[#0C0C06] to-black   flex-col items-center  ">
-      {/* <LoadingCounter /> */}
+      <LoadingCounter />
       <NavBar />
       <Hero />
       <Introduction />

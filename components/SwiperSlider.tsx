@@ -30,8 +30,8 @@ const ImageSlider = () => {
 
   const changeTranX = () => {
     const UpdatePopularSwiperArray: any = [];
-    console.log(count);
-    PopularSwiperArray.forEach((items, index) => {
+
+    PopularSwiperArray.forEach((items: any, index) => {
       let c = count;
       let XTrans;
       XTrans = swipArray[items?.pos][count];
@@ -59,12 +59,7 @@ const ImageSlider = () => {
     <div className=" main-container  w-full">
       <div className=" ease-out duration-1000 w-[936px] flex relative gap-2  m-auto border-[1px] border-white p-3 overflow-hidden">
         {Array.map((items, i) => (
-          <div
-            style={{
-              transform: `translateX(${items.XTrans}px)`,
-            }}
-            className=" w-[300px]  h-[300px]      "
-          >
+          <div className=" w-[300px]  h-[300px]      ">
             <div className="sliderr" style={{ width: '300px' }}>
               <Image src={items.image} alt="photo" fill />
             </div>
