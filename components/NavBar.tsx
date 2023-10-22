@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import { BsList } from 'react-icons/bs';
 import SideBar from './SideBar';
+import CustomMenu from './CustomMenu';
 const NavBar = () => {
   const [headerShadow, setHeaderShadow] = useState<any>(false);
   const [scrollHieght, setscrollHieght] = useState(false);
@@ -66,7 +67,7 @@ const NavBar = () => {
           <Image src="/assets/logo2.svg" alt="logo" width={200} height={100} />
           <div className=" flex gap-5">
             {NavLinks.map((items: any, i: number) => (
-              <BasicMenu items={items} key={i} />
+              <CustomMenu items={items} key={i} />
             ))}
           </div>
           <button className="primary-btn btn-md rounded-full">
@@ -83,7 +84,7 @@ const NavBar = () => {
           <Image src="/assets/logo2.svg" alt="logo" width={200} height={100} />
           <div className=" flex gap-5">
             {NavLinks.map((items: any, i: number) => (
-              <BasicMenu items={items} key={i} />
+              <CustomMenu key={i} items={items} />
             ))}
           </div>
           <button className="primary-btn btn-md rounded-full">Connect</button>

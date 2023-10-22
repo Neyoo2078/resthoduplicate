@@ -38,12 +38,13 @@ export default function BasicMenu({ items }: any) {
           <Menu
             anchorEl={anchorEl}
             open={open}
-            style={{ color: '#000' }}
+            color="#d53838"
+            style={{ color: '#d53838' }}
             onClose={handleClose}
             MenuListProps={{
               'aria-labelledby': 'basic-button',
             }}
-            className={`mt-[25px] ${
+            className={`mt-[25px] text-[#d53838] ${
               anchorEl ? 'animate-slideup' : ' animate-slidedown'
             }`}
           >
