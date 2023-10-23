@@ -56,7 +56,7 @@ const CustomMenu = ({ items }: props) => {
       <AnimatePresence>
         {Menuitems && items.subLInks.length > 0 && (
           <motion.div
-            exit={{ opacity: 1, y: 7, transition: { duration: 0.7 } }}
+            exit={{ opacity: 1, y: 7, transition: { duration: 0.1 } }}
             ref={box}
             style={{ position: 'absolute', bottom: -Height }}
             onMouseEnter={() => {
