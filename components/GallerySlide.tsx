@@ -16,21 +16,26 @@ const GallerySlide = ({ items }: any) => {
       onMouseLeave={() => {
         setHoverSlide(false);
       }}
-      className="lg:w-[247px] lg:h-[231px] w-full h-[180px] rounded-[10px] relative "
+      className="lg:w-[247px] lg:h-[231px] w-full h-[180px] overflow-hidden rounded-[10px] relative "
     >
       <Image src={items.image} alt="gallery " fill className="rounded-[10px]" />
       <AnimatePresence>
         {HoverSlide && (
           <motion.div
-            initial={{ scaleX: 0, x: 0 }}
+            initial={{ x: -247, opacity: 0 }}
             animate={{
-              scaleX: 1,
               x: 0,
+              opacity: [0, 0, 0, 1, 1],
               transition: {
                 duration: 0.5,
               },
             }}
-            exit={{ scaleX: 0 }}
+            exit={{
+              x: 247,
+              transition: {
+                duration: 0.5,
+              },
+            }}
             style={{
               transformOrigin: Originn,
             }}

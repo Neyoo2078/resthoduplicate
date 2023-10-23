@@ -20,7 +20,7 @@ const Gallery = () => {
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
         </div>
         <h2 className="text-[#000] text-[30px]">Restho’s Gallery</h2>
-        <div className="flex w-full border-[1px]  border-[#ff4646] h-[300px]  gap-2 justify-center items-center">
+        <div className="flex w-full  h-[300px]  gap-2 justify-center items-center">
           <Swiper
             slidesPerView={5}
             slidesPerGroup={1}
