@@ -11,19 +11,19 @@ const CustomMenu = ({ items }: props) => {
   const [Menuitems, setMenuitems] = useState(false);
   const [Height, setHeight] = useState(0);
   const [defaultHeight, setdefaultHeight] = useState(20);
-  const box = useRef(null);
-  const outsideBox = useRef(null);
+  const box: React.RefObject<HTMLDivElement> | null = useRef(null);
+  const outsideBox: React.RefObject<HTMLDivElement> | null = useRef(null);
 
   useEffect(() => {
-    if (box.current) {
-      setHeight(box.current?.clientHeight + defaultHeight);
+    if (box?.current) {
+      setHeight(box?.current?.clientHeight + defaultHeight);
     }
   }, [Menuitems]);
 
   useEffect(() => {
     const handleClickOutside = (e: any) => {
       if (e.target.id !== `${items.name}`) {
-        if (outsideBox.current && !outsideBox.current.contains(e.target)) {
+        if (outsideBox.current && !outsideBox.current?.contains(e.target)) {
           setMenuitems(false);
         }
       }

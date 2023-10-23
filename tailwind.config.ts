@@ -19,7 +19,7 @@ const config: Config = {
         cormorant: ['Cormorant Garamond', 'serif'],
       },
       animation: {
-        slideup: 'slideup 1s ease-in-out',
+        slideup: 'slideup 1s linear',
         slidedown: 'slidedown 1s ease-in-out',
         slideleft: 'slideleft 1s ease-in-out',
         slideright: 'slideright 1s ease-in-out',
@@ -32,7 +32,7 @@ const config: Config = {
           to: { opacity: '1' },
         },
         slideup: {
-          from: { opacity: ' 0', transform: 'translateY(10%)' },
+          from: { opacity: ' 0', transform: 'translateY(5%)' },
           to: { opacity: '1', transform: 'none' },
         },
         slidedown: {
