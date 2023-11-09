@@ -329,7 +329,7 @@ h1 {
   width: 35px;
   background-color: var(--white);
   position: absolute;
-  bottom: -18px;
+  top: -18px;
   left: 83px;
   transform: rotate(45deg);
   border: 1px solid #eee;

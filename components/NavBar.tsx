@@ -56,16 +56,22 @@ const NavBar = () => {
         onClick={() => {
           setopenNav(true);
         }}
-        className=" sm:hidden flex w-full justify-between p-5"
+        className=" lg:hidden flex w-full justify-between p-5"
       >
         <Image src="/assets/logo2.svg" alt="logo" width={120} height={27} />
         <BsList className="text-white w-[25px] h-[25px]" />
       </div>
       <SideBar setopenNav={setopenNav} openNav={openNav} />
       {!scrollHieght ? (
-        <div className="sm:flex m-auto justify-between items-center hidden bg-transparent w-[80%] p-7 my-0 rounded-[50px]">
-          <Image src="/assets/logo2.svg" alt="logo" width={200} height={100} />
-          <div className=" flex gap-5">
+        <div className="m-auto justify-between   items-center hidden bg-transparent lg:flex lg:w-full xl:w-[90%] 2xl:w-[80%] p-7 my-0 rounded-[50px]">
+          <Image
+            src="/assets/logo2.svg"
+            alt="logo"
+            width={200}
+            height={100}
+            className="w-[200px] h-[100px] lg:w-[100px] lg:h-[50px]"
+          />
+          <div className=" flex gap-5 lg:gap-1">
             {NavLinks.map((items: any, i: number) => (
               <CustomMenu items={items} key={i} />
             ))}
@@ -75,20 +81,39 @@ const NavBar = () => {
           </button>
         </div>
       ) : (
-        <motion.div
-          variants={slideSlider}
-          initial={'hidden'}
-          animate={'show'}
-          className="sm:flex m-auto  bg-black z-50  items-center fixed top-0 justify-between hidden  w-full p-7 my-0 "
-        >
-          <Image src="/assets/logo2.svg" alt="logo" width={200} height={100} />
-          <div className=" flex gap-5">
-            {NavLinks.map((items: any, i: number) => (
-              <CustomMenu key={i} items={items} />
-            ))}
-          </div>
-          <button className="primary-btn btn-md rounded-full">Connect</button>
-        </motion.div>
+        <>
+          <motion.div
+            variants={slideSlider}
+            initial={'hidden'}
+            animate={'show'}
+            className="lg:flex  m-auto  bg-black z-50  items-center fixed top-0 justify-between hidden  w-full p-7 my-0 "
+          >
+            <Image
+              src="/assets/logo2.svg"
+              alt="logo"
+              width={200}
+              height={100}
+            />
+            <div className=" flex gap-5">
+              {NavLinks.map((items: any, i: number) => (
+                <CustomMenu key={i} items={items} />
+              ))}
+            </div>
+            <button className="primary-btn btn-md rounded-full">Connect</button>
+          </motion.div>{' '}
+          <motion.div
+            onClick={() => {
+              setopenNav(true);
+            }}
+            className=" lg:hidden flex w-full fixed top-0 bg-black z-50 justify-between p-5"
+            variants={slideSlider}
+            initial={'hidden'}
+            animate={'show'}
+          >
+            <Image src="/assets/logo2.svg" alt="logo" width={120} height={27} />
+            <BsList className="text-white w-[25px] h-[25px]" />
+          </motion.div>
+        </>
       )}
     </div>
   );

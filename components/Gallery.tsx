@@ -12,7 +12,7 @@ import GallerySlide from './GallerySlide';
 
 const Gallery = () => {
   return (
-    <div className="bg-white flex-col  pt-[100px] relative  text-white  items-center justify-center p-[40px] overflow-visible gap-5  flex w-full min-h-[300px]  ">
+    <div className="bg-white flex-col   pt-[100px] relative  text-white  items-center justify-center p-[40px] overflow-visible gap-5  flex w-full h-[500px]  ">
       <div className="section-title2 w-full mx-auto  flex flex-col justify-center items-center">
         <div className="dot flex justify-center items-center gap-2">
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />

@@ -37,7 +37,7 @@ const HeroText = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="banner-content mt-6 z-40 w-full md:w-[50%] flex flex-col justify-center p-[5px] md:p-0 items-center  md:gap-6"
+      className="banner-content mt-6 z-40 w-full md:w-[50%] md:pt-[100px] lg:pt-0 lg:w-[50%]  h-full flex flex-col  lg:justify-center p-[5px] lg:p-0 items-center gap-3 lg:gap-6"
     >
       <motion.div
         variants={item}
@@ -59,7 +59,7 @@ const HeroText = () => {
         initial="hidden"
         variants={item}
         animate="show"
-        className="font-[700]  text-[2.125rem] md:text-[5rem] text-center"
+        className="font-[700]  text-[2.125rem] md:text-[3rem] lg:text-[5rem] text-center"
       >
         Find Your Best Healthy & Tasty Food
       </motion.h3>

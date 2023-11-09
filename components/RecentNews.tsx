@@ -16,8 +16,8 @@ import { FaRegCommentDots } from 'react-icons/fa';
 
 const RecentNews = () => {
   return (
-    <div className="bg-white  flex-col    relative  text-white  items-center justify-center p-[40px] overflow-visible gap-5  flex w-full min-h-[550px]  ">
-      <div className="section-title2 w-full mx-auto  mt-[200px] lg:mt-[350px]  flex flex-col justify-center items-center">
+    <div className="bg-white  flex-col relative  text-white   items-start justify-start p-[10px]  gap-1  flex w-full h-[800px]  ">
+      <div className="section-title2 w-full mx-auto  mt-[20px] lg:mt-[50px]  flex flex-col justify-center items-center">
         <div className="dot flex justify-center items-center gap-2">
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
           <h1 className=" text-[18px]">Recent News</h1>
@@ -70,8 +70,8 @@ const RecentNews = () => {
         >
           {recentNews.map((items, i) => (
             <SwiperSlide key={i}>
-              <div className="flex flex-col p-[3px] w-full h-[500px] justify-start items-start  gap-2">
-                <div className="w-[439px] h-[493px]">
+              <div className="flex flex-col  p-[3px] w-full h-[500px] lg:justify-start lg:items-start md:justify-center md:items-center  gap-2">
+                <div className="lg:w-[439px] lg:h-[493px] w-[439px] h-[493px] mx-auto">
                   <Image
                     src={items.image}
                     alt="blog"

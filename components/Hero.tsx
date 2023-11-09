@@ -71,18 +71,18 @@ const Hero = () => {
       </div>
       <div
         onClick={handleprevious}
-        className="rounded-full w-[25px] h-[25px] md:w-[40px] md:h-[40px] cursor-pointer flex items-center justify-center absolute top-[400px] left-[10px] md:top-[340px]  z-40 md:left-[30px] text-white bg-[#bf9444] p-2"
+        className="rounded-full w-[25px] md:top-[310px] md:w-[35px] md:h-[35px] h-[25px] lg:w-[40px] lg:h-[40px] cursor-pointer flex items-center justify-center absolute top-[400px] left-[10px] lg:top-[340px]  z-40 lg:left-[30px] text-white bg-[#bf9444] p-2"
       >
-        <ArrowBackIosIcon className="m-auto w-[12px] h-[12px] md:w-[24px] md:h-[24px]" />
+        <ArrowBackIosIcon className="m-auto md:w-[20px] md:h-[20px] w-[12px] h-[12px] lg:w-[24px] lg:h-[24px]" />
       </div>
       <div
         onClick={handleNext}
-        className="rounded-full cursor-pointer flex items-center top-[400px] right-[10px] justify-center absolute md:top-[340px]  z-40 md:right-[30px] text-white bg-[#bf9444] p-2"
+        className="rounded-full cursor-pointer flex md:top-[310px] md:w-[35px] md:h-[35px] items-center top-[400px] right-[10px] justify-center absolute lg:top-[340px]  z-40 lg:right-[30px] text-white bg-[#bf9444] p-2"
       >
         <ArrowForwardIosIcon className="m-auto w-[12px] h-[12px] md:w-[24px] md:h-[24px]" />
       </div>
       <svg
-        className="absolute md:w-[284px] w-[284px] h-[124px] -left-[65px] top-[358px]  md:h-[224px] md:left-0 md:top-[255px]  "
+        className="absolute md:w-[200px] md:h-[140px] lg:w-[284px] lg:h-[224px] w-[284px] h-[124px] -left-[65px] top-[358px] md:top-[255px]  md:-left-[12px] lg:left-0 lg:top-[255px]  "
         viewBox="0 0 142 112"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ const Hero = () => {
         />
       </svg>
       <svg
-        className="absolute -right-[65px] z-10 md:right-0 top-[358px] md:top-[255px] md:w-[284px]  md:h-[224px] w-[284px] h-[124px] transform scale-x-[-1]  "
+        className="absolute -right-[65px] md:w-[200px] md:h-[140px]  md:top-[255px]  md:-right-[12px] z-10 lg:right-0 top-[358px] lg:top-[255px] lg:w-[284px]  lg:h-[224px] w-[284px] h-[124px] transform scale-x-[-1]  "
         viewBox="0 0 142 112"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -107,11 +107,11 @@ const Hero = () => {
         onClick={() => {
           setisOpen(!isOpen);
         }}
-        className="rotating-div z-40 absolute top-[370px] left-[45px] w-[100px] h-[100px] md:top-[270px] md:scale-100 rounded-full md:w-[195px] md:h-[195px] md:left-[75px] "
+        className="rotating-div z-40 absolute md:top-[265px] md:left-[50px] md:w-[120px] md:h-[120px] top-[370px] left-[45px] w-[100px] h-[100px] lg:top-[270px] lg:scale-100 rounded-full lg:w-[195px] lg:h-[195px] lg:left-[75px] "
       >
         <Image fill src={`${ImagesArray[currentImage].image1}`} alt="pics" />
       </div>
-      <div className="md:bg-black rotating-div  z-40  bg-[#d03131] absolute top-[370px] right-[45px] w-[100px] h-[100px] md:top-[270px] md:scale-100 rounded-full md:w-[195px] md:h-[195px] md:right-[75px] ">
+      <div className="lg:bg-black rotating-div md:top-[265px] md:right-[50px] md:w-[120px] md:h-[120px]  z-40  bg-[#d03131] absolute top-[370px] right-[45px] w-[100px] h-[100px] lg:top-[270px] lg:scale-100 rounded-full lg:w-[195px] lg:h-[195px] lg:right-[75px] ">
         <Image fill src={`${ImagesArray[currentImage].image2}`} alt="pics" />
       </div>
       <Image

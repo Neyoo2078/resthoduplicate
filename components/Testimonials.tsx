@@ -74,7 +74,7 @@ function Testimonials() {
           </p>
         </div>
         <div className="lg:w-[60%] lg:h-[336px] w-full lg:flex-row flex-col flex gap-2 items-center justify-start">
-          <div className="lg:w-[94px]  h-[94px] w-full lg:h-[290px] flex items-center p-1">
+          <div className="lg:w-[94px]  h-[94px]  w-full md:w-[60%] lg:h-[290px] flex items-center p-1">
             <Swiper
               initialSlide={clickedIndex}
               ref={swiperRef}

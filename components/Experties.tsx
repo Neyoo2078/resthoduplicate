@@ -14,7 +14,7 @@ import Gallery from './Gallery';
 
 const Experties = () => {
   return (
-    <div className="bg-white  flex-col    relative  text-white  items-center justify-center p-[40px] overflow-visible gap-5  flex w-full min-h-[550px]  ">
+    <div className="bg-white  flex-col    relative  text-white  items-center justify-center border-[1px] border-[#ac3a3a] p-[40px] overflow-visible gap-5  flex w-full h-[900px] lg:h-[900px]  ">
       <div className="section-title2 w-full mx-auto  mt-[200px] lg:mt-[350px]  flex flex-col justify-center items-center">
         <div className="dot flex justify-center items-center gap-2">
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />

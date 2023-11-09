@@ -56,7 +56,7 @@ const OurNewItem = () => {
           Restho New Item List
         </h3>
         <div className="flex flex-col lg:flex-row gap-3 w-full">
-          <div className="lg:w-[33.3%] w-full bg-[#fafafa] flex  flex-col  items-center justify-center  rounded-[10px] border-[1px] py-[75px] px-[40px]   border-[#eee]">
+          <div className="lg:w-[33.3%] md:w-full w-full bg-[#fafafa] flex  flex-col  items-center justify-center  rounded-[10px] border-[1px] py-[75px] px-[40px]   border-[#eee]">
             <div className="primary-btn   rounded-full py-[4px] px-[14px] gap-2 items-center">
               <button>Special Offer</button>
             </div>
@@ -137,7 +137,7 @@ const OurNewItem = () => {
       </div>
 
       <div className="w-full -mt-[60px] pb-9 ">
-        <div className="w-[80%]  p-[4px]  m-auto flex justify-center items-center">
+        <div className=" w-full lg:w-[80%]  p-[4px]  m-auto flex justify-center items-center">
           <div
             onClick={handleprevious}
             className="w-[42px] hidden  h-[42px] rounded-full md:flex items-center cursor-pointer justify-center bg-white hover:bg-[#bf9444] border-[1px] border-[#bf9444]"
@@ -146,15 +146,15 @@ const OurNewItem = () => {
               <BsArrowLeft className="text-[#bf9444] w-[20px] hover:text-[#fff] h-[20px] justify-center" />
             }
           </div>
-          <div className="flex items-center justify-center  gap-2  w-full md:w-[80%]">
+          <div className="flex items-center justify-center  gap-2  w-full  lg:w-[80%]">
             {imageArray.map((items, i) => (
               <div
                 key={i}
                 className="md:w-[100px] w-[56px] h-[56px] relative md:h-[100px] rounded-full"
               >
-                <Image src={items.image} alt="photo" width={100} height={100} />
+                <Image src={items.image} alt="photo" fill />
                 {currentImage === i && (
-                  <div className="absolute inset-0  bg-[rgba(9,22,29,.65)] rounded-full "></div>
+                  <div className="absolute md:w-[100px] md:h-[100px] inset-0  rounded-full  bg-[rgba(9,22,29,.65)]  "></div>
                 )}
               </div>
             ))}

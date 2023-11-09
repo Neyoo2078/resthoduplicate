@@ -13,11 +13,11 @@ const Introduction = () => {
       </div>
 
       <div className="section-title">
-        <h3 className=" text-[2rem] md:text-[3.75rem] font-semibold text-black">
+        <h3 className=" text-[2rem]  lg:text-[3.75rem] md:my-[10px] font-semibold text-black">
           We Are Experienced Restaurant
         </h3>
       </div>
-      <div className="flex flex-col md:flex-row items-start justify-start gap-3">
+      <div className="flex flex-col lg:flex-row md:items-center lg:items-start justify-start gap-3">
         <div className="w-[431px] rounded-tl-lg rounded-br-lg h-[419px]">
           <Image
             className="rounded-tl-lg rounded-br-lg "

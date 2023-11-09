@@ -5,13 +5,13 @@ import { IndianMenu, ItalianMenu } from '@/utils/datas';
 const MenuList = () => {
   return (
     <div className="bg-white flex-col  text-white  items-start justify-center p-[40px]  gap-5  flex w-full min-h-[500px]  ">
-      <div className="section-title2 w-full mx-auto flex flex-col gap-2 justify-center items-center">
+      <div className="section-title2 w-full mx-auto flex flex-col gap-4 justify-center items-center">
         <div className="dot flex justify-center items-center gap-3">
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
           <h1 className=" text-[18px]">Our New Item</h1>
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
         </div>
-        <h2 className="text-[#000] text-[2rem] lg:text-[3.75rem] font-semibold">
+        <h2 className="text-[#000] text-[1.5rem] lg:text-[3.75rem] font-semibold">
           Our Menu List
         </h2>
         <div className="lg:w-[1320px] lg:h-[844px] w-full  flex-col lg:flex-row flex gap-2">
@@ -22,7 +22,7 @@ const MenuList = () => {
               <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
             </div>
             <h2 className="text-[#000] text-[30px]">Indian Menu</h2>
-            <div className="w-full">
+            <div className="w-full ">
               <ul className="w-full ">
                 {IndianMenu.map((items, i) => (
                   <li className="flex gap-3 justify-center my-4   items-start text-black">

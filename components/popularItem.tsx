@@ -37,7 +37,6 @@ const popularItem = () => {
       }
     };
   }, [updateIndex]);
-  const bullets = ['bullet1', 'bullet2', 'bullets3'];
 
   // on click
   const handleOnSetSwiper = (i: number) => {
@@ -47,7 +46,7 @@ const popularItem = () => {
   };
 
   return (
-    <div className="popular-bg flex-col  items-start justify-center p-[60px]  gap-11  flex w-full min-h-[500px] text-black ">
+    <div className="popular-bg flex-col  items-start justify-center  sm:p-[60px]  gap-11  flex w-full min-h-[500px] text-black ">
       <div className="section-title2 w-full mx-auto flex flex-col justify-center items-center">
         <div className="dot flex justify-center items-center gap-2">
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
