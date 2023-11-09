@@ -11,9 +11,9 @@ const MenuList = () => {
           <h1 className=" text-[18px]">Our New Item</h1>
           <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
         </div>
-        <h2 className="text-[#000] text-[1.5rem] lg:text-[3.75rem] font-semibold">
+        <p className="text-[#000] text-[30px]  lg:text-[50px] font-[700] font-cormorant">
           Our Menu List
-        </h2>
+        </p>
         <div className="lg:w-[1320px] lg:h-[844px] w-full  flex-col lg:flex-row flex gap-2">
           <div className="lg:w-[636px] lg:h-[820px] w-full  flex p-7 flex-col justify-start items-center bg-[#fafafa] relative">
             <div className="dot flex justify-center items-center gap-2">
@@ -21,7 +21,9 @@ const MenuList = () => {
               <h1 className=" text-[18px] text-black">Welcome to restho</h1>
               <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
             </div>
-            <h2 className="text-[#000] text-[30px]">Indian Menu</h2>
+            <p className="text-[#000] text-[30px]  lg:text-[50px] font-[700] font-cormorant">
+              Indian Menu
+            </p>
             <div className="w-full ">
               <ul className="w-full ">
                 {IndianMenu.map((items, i) => (
@@ -30,7 +32,7 @@ const MenuList = () => {
                       0{i + 1}.
                     </div>
                     <div className="flex   w-[499px] p-0  justify-start items-start flex-col ">
-                      <p className="list w-full text-[24px] flex items-center  justify-between gap-6 text-black font-[700]">
+                      <p className="list w-full  text-[17px] md:text-[24px] flex items-center  justify-between gap-6 text-black font-[700]">
                         {items.name}
                         <span className="dot">
                           <Image
@@ -51,7 +53,7 @@ const MenuList = () => {
                 ))}
               </ul>
               <div className="w-full text-center text-black">
-                <p>
+                <p className="text-[10px] md:text-[12px] lg:text-[17px]">
                   <span className="text-[#b82e2e] font-semibold">N.B:</span> All
                   food are available in restauarnt & don’t waste your food.
                   Address: Mirpur DOHS, House No-167/170, Avenue-01.
@@ -87,13 +89,15 @@ const MenuList = () => {
               height={147}
             />
           </div>
-          <div className="lg:w-[636px] lg:h-[820px] w-full flex p-7 flex-col justify-start items-center bg-[#fafafa] relative">
+          <div className="lg:w-[636px] lg:h-[820px] w-full flex p-11 flex-col justify-start items-center bg-[#fafafa] relative">
             <div className="dot flex justify-center items-center gap-2">
               <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
               <h1 className=" text-[18px] text-black">Welcome to restho</h1>
               <Image src="/assets/sub.svg" alt="photo" width={20} height={20} />
             </div>
-            <h2 className="text-[#000] text-[30px]">Italian Menu</h2>
+            <p className="text-[#000] text-[30px]  lg:text-[50px] font-[700] font-cormorant">
+              Italian Menu
+            </p>
             <div className="w-full">
               <ul className="w-full ">
                 {ItalianMenu.map((items, i) => (
@@ -102,7 +106,7 @@ const MenuList = () => {
                       0{i + 1}.
                     </div>
                     <div className="flex   w-[499px] p-0  justify-start items-start flex-col ">
-                      <p className="list w-full text-[24px] flex items-center  justify-between gap-6 text-black font-[700]">
+                      <p className="list w-full text-[17px] md:text-[24px] flex items-center  justify-between gap-6 text-black font-[700]">
                         {items.name}
                         <span className="dot">
                           <Image
@@ -123,7 +127,7 @@ const MenuList = () => {
                 ))}
               </ul>
               <div className="w-full text-center text-black">
-                <p>
+                <p className="text-[10px] md:text-[12px] lg:text-[17px]">
                   <span className="text-[#b82e2e] font-semibold">N.B:</span> All
                   food are available in restauarnt & don’t waste your food.
                   Address: Mirpur DOHS, House No-167/170, Avenue-01.

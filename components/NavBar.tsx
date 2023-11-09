@@ -3,7 +3,7 @@ import React from 'react';
 import BasicMenu from './Menu';
 import { NavLinks } from '@/utils/datas';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import { BsList } from 'react-icons/bs';
 import SideBar from './SideBar';
@@ -13,6 +13,9 @@ const NavBar = () => {
   const [scrollHieght, setscrollHieght] = useState(false);
 
   const [openNav, setopenNav] = useState(false);
+
+  const topNav = useRef<HTMLDivElement>(null);
+  const floatNav = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -57,11 +60,17 @@ const NavBar = () => {
           setopenNav(true);
         }}
         className=" lg:hidden flex w-full justify-between p-5"
+        ref={topNav}
       >
         <Image src="/assets/logo2.svg" alt="logo" width={120} height={27} />
         <BsList className="text-white w-[25px] h-[25px]" />
       </div>
-      <SideBar setopenNav={setopenNav} openNav={openNav} />
+      <SideBar
+        setopenNav={setopenNav}
+        openNav={openNav}
+        topNav={topNav}
+        floatNav={floatNav}
+      />
       {!scrollHieght ? (
         <div className="m-auto justify-between   items-center hidden bg-transparent lg:flex lg:w-full xl:w-[90%] 2xl:w-[80%] p-7 my-0 rounded-[50px]">
           <Image
@@ -109,6 +118,7 @@ const NavBar = () => {
             variants={slideSlider}
             initial={'hidden'}
             animate={'show'}
+            ref={floatNav}
           >
             <Image src="/assets/logo2.svg" alt="logo" width={120} height={27} />
             <BsList className="text-white w-[25px] h-[25px]" />

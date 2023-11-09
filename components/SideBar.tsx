@@ -1,20 +1,44 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
 import { AiOutlinePlus } from 'react-icons/ai';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { BiPhoneCall } from 'react-icons/bi';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SideBar = ({ setopenNav, openNav }: any) => {
+const SideBar = ({ setopenNav, openNav, topNav, floatNav }: any) => {
   const [openHome, setopenHome] = useState(false);
-
+  console.log({ navvOpen: openNav });
   const [menu, setmenu] = useState(false);
 
   const [pages, setpages] = useState(false);
   const [blog, setblog] = useState(false);
+
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const clickoutside = (e: any) => {
+      if (e.target.id !== 'Navref') {
+        if (
+          sidebarRef.current &&
+          !sidebarRef.current.contains(e.target) &&
+          topNav.current &&
+          !topNav.current.contains(e.target) &&
+          floatNav.current &&
+          !floatNav.current.contains(e.target)
+        ) {
+          setopenNav(false);
+        }
+      }
+    };
+
+    window.addEventListener('click', clickoutside);
+    return () => {
+      window.removeEventListener('click', clickoutside);
+    };
+  }, []);
 
   const navVariant = {
     hidden: { x: -280 },
@@ -41,6 +65,8 @@ const SideBar = ({ setopenNav, openNav }: any) => {
             },
           }}
           className="fixed flex  flex-col overflow-auto gap-[45px] p-[25px] bg-[#09161d] z-50 left-0  top-0 h-full w-[280px] "
+          id="Navref"
+          ref={sidebarRef}
         >
           <div className="w-full flex justify-between">
             <Image src="/assets/logo2.svg" alt="logo" width={120} height={27} />
